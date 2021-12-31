@@ -3,6 +3,7 @@
 
 int adb_installed_at(const char* atPath);
 int open_tcpip_connection(char* device, char* port, int stdout_fd, int stderr_fd);
+int open_tcpip(char* port, int stdout_fd, int stderr_fd);
 int connect_to(char* device, char* port, int stdout_fd, int stderr_fd);
 int disconnect_from(char* device, char* port, int stdout_fd, int stderr_fd);
 int get_device_list(int stdout_fd, int stderr_fd);
