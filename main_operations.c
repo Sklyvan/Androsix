@@ -1,4 +1,3 @@
-#include <string.h>
 #include "main_operations.h"
 
 int adb_installed_at(const char* atPath)

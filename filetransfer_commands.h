@@ -1,6 +1,7 @@
 #ifndef ANDROSIX_FILETRANSFER_COMMANDS_H
 #define ANDROSIX_FILETRANSFER_COMMANDS_H
 
+#include "main_commands.h"
 #define PUSH_FILE "push"
 #define PULL_FILE "pull"
 #define SYNC_FLAG "sync"
