@@ -165,6 +165,52 @@ int send_shell_command(char* device, char* port, char* command, int stdout_fd, i
     return childStatus;
 }
 
+int start_server(int stdout_fd, int stderr_fd)
+{
+    // You can use -1 value to set the default value.
+    stdout_fd = stdout_fd == -1 ? 1 : stdout_fd;
+    stderr_fd = stderr_fd == -1 ? 2 : stderr_fd;
+
+    pid_t childID = fork(); int childStatus = 1;
+    if (childID == 0)
+    {
+        char* argv[] = {ADB_MAIN_CALL, ADB_START_SERVER, NULL};
+        dup2(stdout_fd, 1); // Redirect stdout to the pipe.
+        dup2(stderr_fd, 2); // Redirect stderr to the pipe.
+        execvp(argv[0], argv);
+        exit(-1);
+    }
+    else
+    {
+        // Wait for the child process to finish
+        waitpid(childID, &childStatus, 0);
+    }
+    return childStatus;
+}
+
+int reconnect_server(int stdout_fd, int stderr_fd)
+{
+    // You can use -1 value to set the default value.
+    stdout_fd = stdout_fd == -1 ? 1 : stdout_fd;
+    stderr_fd = stderr_fd == -1 ? 2 : stderr_fd;
+
+    pid_t childID = fork(); int childStatus = 1;
+    if (childID == 0)
+    {
+        char* argv[] = {ADB_MAIN_CALL, ADB_RECONNECT_SERVER, NULL};
+        dup2(stdout_fd, 1); // Redirect stdout to the pipe.
+        dup2(stderr_fd, 2); // Redirect stderr to the pipe.
+        execvp(argv[0], argv);
+        exit(-1);
+    }
+    else
+    {
+        // Wait for the child process to finish
+        waitpid(childID, &childStatus, 0);
+    }
+    return childStatus;
+}
+
 int kill_server(int stdout_fd, int stderr_fd)
 {
     // You can use -1 value to set the default value.
