@@ -28,8 +28,6 @@ int adb_installed_at(const char* atPath);
 
 This function is the only one that does not recieve the stdout and stderr parameters, thats because this funcion does not use any ADB utility and it does not generate any output. That's just a function to know if adb is installed at *atPath* location. It returns 0 if its installed.
 
-
-
 ##### Open TCPIP on Port (adb tcpip port, adb -s device tcpip port)
 
 ```c
@@ -44,8 +42,6 @@ int open_tcpip_connection(char* device, char* port, int stdout_fd, int stderr_fd
 
 This functions does the same thing as the previous one, but in this case, it does the TCPIP connection to a specific device. This function is useful when more than one device is connected.
 
-
-
 ##### Connect to Device (adb connect device:port)
 
 ```c
@@ -53,8 +49,6 @@ int connect_to(char* device, char* port, int stdout_fd, int stderr_fd);
 ```
 
 With this function we can connect ADB to our device by its IP address.
-
-
 
 ##### Disconnect from Device (adb disconnect device:port)
 
@@ -64,8 +58,6 @@ int disconnect_from(char* device, char* port, int stdout_fd, int stderr_fd);
 
 With this function we can disconnect our device port from the ADB connection.
 
-##### 
-
 ##### Get List of Devices (adb devices)
 
 ```c
@@ -73,8 +65,6 @@ int get_device_list(int stdout_fd, int stderr_fd);
 ```
 
 This function does not recieve any parameter, since it just sends a list of the connected devices with ADB to the stdout_fd.
-
-
 
 ##### Send a Shell Command to Device (adb -s device shell command)
 
@@ -86,8 +76,6 @@ This function allows us to send any UNIX command to the ADB shell of a specific 
 
 Have in mind that the shell uses stdout and stderr, so if the command goes wrong, the error message is going through stderr.
 
-
-
 ##### Kill Server (adb kill-server)
 
 ```c
@@ -96,15 +84,12 @@ int kill_server(int stdout_fd, int stderr_fd);
 
 Simple function, it just calls to the command to kill the server if its running.
 
-
-
 ## Example Code
 
 In this example, we are disconnecting from the device, listing the connected the devices, connecting to the device, listing again the connected devices, sending a command to the device shell, and finally killing the ADB server.
 
 ```c
 #include "main_operations.h"
-#include "stdio.h"
 
 #define DEVICE_IP "128.12.10.758"
 #define DEVICE_PORT "5555"
@@ -113,7 +98,7 @@ int main()
 {
     // First of all, we're going to see if ADB is installed
     if (adb_installed_at("/usr/bin/adb") != 0) return 1;
-    
+
     disconnect_from(DEVICE_IP, DEVICE_PORT, -1, -1);
     get_device_list(-1, -1);
 
