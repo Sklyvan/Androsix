@@ -1,5 +1,4 @@
-# Androsix
-
+![](./res/BigLogo.png)
 Androsix is a set of functions written in C & [POSIX ](https://en.wikipedia.org/wiki/POSIX) to facilitate the communication with [Android Debug Bridge](https://developer.android.com/studio/command-line/adb) inside a C or C++ application.
 
 The majority of the functions have an argument to indicate where you want to send the standard output and the standard error. If you pass a -1, it uses default values.
