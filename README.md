@@ -100,7 +100,10 @@ int kill_server(int stdout_fd, int stderr_fd);
 
 Simple function, it just calls to the command to kill the server if it's running.
 
-## [File Transfer Operations](./FileTransferOperations.md)
+## Other Operations:
+
+- [File Transfer Operations](./FileTransferOperations.md)
+- Debugging Operations
 
 ## Example Code
 
