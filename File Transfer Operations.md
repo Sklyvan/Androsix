@@ -8,7 +8,7 @@ int push_file(char* device, char* port, char* filePath, char* devicePath, int st
 
 Function to send files or directories from local *filePath* to *devicePath*.
 
-##### Push File Syncronization (adb push --sync filePath devicePath)
+##### Push File Synchronization (adb push --sync filePath devicePath)
 
 ```c
 int push_sync_file(char* device, char* port, char* filePath, char* devicePath, int stdout_fd, int stderr_fd);
@@ -39,4 +39,4 @@ Install function allows us to install a package located at *filePath* to our dev
 int install_multi_package(char* device, char* port, char* filePath, char* args, int stdout_fd, int stderr_fd);
 ```
 
-Same function as *install_package* the main diference is that installs a package atomically. You can also add more arguments with args, for example "-r --instant".
+Same function as *install_package* the main difference is that installs a package atomically. You can also add more arguments with args, for example "-r --instant".
