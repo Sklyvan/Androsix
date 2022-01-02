@@ -103,7 +103,7 @@ Simple function, it just calls to the command to kill the server if it's running
 ## Other Operations:
 
 - [File Transfer Operations](./FileTransferOperations.md)
-- Debugging Operations
+- [Debugging Operations](./DebuggingOperations.md)
 
 ## Example Code
 

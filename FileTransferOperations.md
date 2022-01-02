@@ -1,5 +1,7 @@
 ## File Transfer Operations
 
+These functions are useful to send and receive files with the device and install and uninstall packages.
+
 ##### Push File (adb push filePath devicePath)
 
 ```c
