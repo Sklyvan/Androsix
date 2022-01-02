@@ -102,8 +102,8 @@ Simple function, it just calls to the command to kill the server if it's running
 
 ## Other Operations:
 
-- [File Transfer Operations](./FileTransferOperations.md)
-- [Debugging Operations](./DebuggingOperations.md)
+- [File Transfer Operations](./res/FileTransferOperations.md)
+- [Debugging Operations](./res/DebuggingOperations.md)
 
 ## Example Code
 
