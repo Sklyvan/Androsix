@@ -2,7 +2,7 @@
 #define ANDROSIX_FILETRANSFER_OPERATIONS_H
 
 #include "filetransfer_commands.h"
-#include "includes.h"
+#include "../includes.h"
 
 int push_file(char* device, char* port, char* filePath, char* devicePath, int stdout_fd, int stderr_fd);
 int push_sync_file(char* device, char* port, char* filePath, char* devicePath, int stdout_fd, int stderr_fd);
