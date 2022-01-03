@@ -2,7 +2,7 @@
 #define ANDROSIX_MAIN_OPERATIONS_H
 
 #include "main_commands.h"
-#include "includes.h"
+#include "../includes.h"
 
 int adb_installed_at(const char* atPath);
 int open_tcpip_connection(char* device, char* port, int stdout_fd, int stderr_fd);
