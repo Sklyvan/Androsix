@@ -18,6 +18,7 @@ After the function arguments, we get an integer to send the standard output and 
 ## Main Operations
 
 These operations are the most basic operations that you will need to connect your device to Android Debug Bridge.
+The files containing the operations are inside the mno folder.
 
 ##### Check for ADB Installation
 
@@ -101,15 +102,15 @@ Simple function, it just calls to the command to kill the server if it's running
 
 ## Other Operations:
 
-- [File Transfer Operations](./res/FileTransferOperations.md)
-- [Debugging Operations](./res/DebuggingOperations.md)
+- [File Transfer Operations](./res/FileTransferOperations.md): These files are located inside the flt folder.
+- [Debugging Operations](./res/DebuggingOperations.md): These files are located inside the dbg folder.
 
 ## Example Code
 
 In this example, we are disconnecting from the device, listing the connected the devices, connecting to the device, listing again the connected devices, sending a command to the device shell, and finally killing the ADB server.
 
 ```c
-#include "main_operations.h"
+#include "androsix.h"
 
 #define DEVICE_IP "128.12.10.758"
 #define DEVICE_PORT "5555"
