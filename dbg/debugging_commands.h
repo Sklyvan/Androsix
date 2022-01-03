@@ -1,7 +1,7 @@
 #ifndef ANDROSIX_DEBUGGING_COMMANDS_H
 #define ANDROSIX_DEBUGGING_COMMANDS_H
 
-#include "main_commands.h"
+#include "../mno/main_commands.h"
 #define BUG_REPORT "bugreport"
 #define WAIT_FOR_ANY "wait-for-any-"
 #define WAIT_FOR_USB "wait-for-usb-"
