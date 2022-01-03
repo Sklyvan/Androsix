@@ -108,6 +108,12 @@ Simple function, it just calls to the command to kill the server if it's running
 ## Example Code
 
 In this example, we are disconnecting from the device, listing the connected the devices, connecting to the device, listing again the connected devices, sending a command to the device shell, and finally killing the ADB server.
+<br>
+To use the library, you just need to include the header file and call the functions.
+```shell
+git clone https://github.com/Sklyvan/Androsix.git
+cd Androsix
+```
 
 ```c
 #include "androsix.h"
