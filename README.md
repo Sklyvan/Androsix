@@ -102,8 +102,8 @@ Simple function, it just calls to the command to kill the server if it's running
 
 ## Other Operations:
 
-- [File Transfer Operations](./res/FileTransferOperations.md): These files are located inside the flt folder.
-- [Debugging Operations](./res/DebuggingOperations.md): These files are located inside the dbg folder.
+- [File Transfer Operations](flt/FileTransferOperations.md): These files are located inside the flt folder.
+- [Debugging Operations](dbg/DebuggingOperations.md): These files are located inside the dbg folder.
 
 ## Example Code
 
